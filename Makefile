@@ -35,6 +35,9 @@ console: ## Login in console.
 install: ## Install dependencies without running the whole application.
 	${DC_RUN} composer install
 
+phpcbf:
+	${DC_RUN} ./vendor/bin/phpcbf && ./vendor/bin/phpcs
+
 success-message:
 	@echo "You can now access the application at http://localhost:8337"
 	@echo "Good luck! 🚀"
